@@ -1,0 +1,58 @@
+//##Setting up git
+
+//## Setting username
+$ git config --global user.name "You name goes here"
+
+//##Setting email id
+$ git config --global user.email "Your email goes here"
+
+//## This information is used by Git for each commit.
+//## Mainly for group work so, other will know who is commiting.
+
+
+//## Show your configuration settings
+$ git config --list
+
+
+
+
+//## CREATING A NEW REPOSITORY FROM SCRATCH
+//## Initializing a new repository: git init
+$ git init
+
+//## SAVING CHANGES TO THE REPO: "git add" and "git commit"
+//## once the repo is initialized we can now add files
+//## for git to keep track off.  git add will temporarily
+//## add files to the repo, but will not save them. 
+$ git add
+
+//## git commit save and permanently add the files to the git
+//## Kinda of like a final save. 
+//## The -m command allows you to place a comment about the changes
+//## that was made.  
+$ git commit -m "Place comment here"
+
+
+//## NOW TO CONNECT IT TO GITHUB
+//## Before connecting to the repo to github you should know
+//## that you have a local repository as well as a github repository
+//## commiting and updating the local repo will not automacticly update
+//## the githbu repo.  To create the github you...
+
+Go to github.com
+Log in to your account.
+Click the new repository button in the top-right. You’ll have an option 
+there to initialize the repository with a README file, you can choose 
+yes or no it doesnt matter.
+Click the “Create repository” button
+
+
+//## NOW BACK ON THE COMMAND LINE
+//## We are going to add the local repo to the github
+//## where it says "username" add your github username and
+//## where it says "new_repo" add the name of the repo you just made
+$ git remote add origin https://github.com/username/new_repo 
+
+//## Now that the local repo and the github repo are linked
+//## its time to "push" the local repo to the git hub
+$ git push -u origin master
